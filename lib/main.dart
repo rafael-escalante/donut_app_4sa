@@ -1,4 +1,4 @@
-import 'package:donut_app_4sa/snake.dart';
+import 'package:flutter_application_1/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,10 +15,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: HomePage(),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+          tabBarTheme: const TabBarTheme(indicatorColor: Colors.pink)),
+      home: const HomePage(),
     );
   }
 }
