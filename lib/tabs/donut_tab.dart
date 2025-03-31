@@ -4,11 +4,35 @@ import 'package:flutter_application_1/utils/donut_tile.dart';
 class DonutTab extends StatelessWidget {
   //list of donuts
   final List donutsOnSale = [
-    // [ donutFlavor, donutPrice, donutColor, imageName ]
-    ["Ice Cream", "36", Colors.blue, "lib/images/icecream_donut.png"],
-    ["Strawberry", "45", Colors.red, "lib/images/strawberry_donut.png"],
-    ["Grape Ape", "84", Colors.purple, "lib/images/grape_donut.png"],
-    ["Choco", "95", Colors.brown, "lib/images/chocolate_donut.png"],
+    // [ donutFlavor,donutStore, donutPrice, donutColor, imageName ]
+    [
+      "Ice Cream",
+      "Pollos Hermanos",
+      "36",
+      Colors.blue,
+      "lib/images/icecream_donut.png"
+    ],
+    [
+      "Strawberry",
+      "Morayta Donuts",
+      "45",
+      Colors.red,
+      "lib/images/strawberry_donut.png"
+    ],
+    [
+      "Grape Ape",
+      "Selva Uitz Donuts",
+      "84",
+      Colors.purple,
+      "lib/images/grape_donut.png"
+    ],
+    [
+      "Choco",
+      "Cesarin Donuts",
+      "95",
+      Colors.brown,
+      "lib/images/chocolate_donut.png"
+    ],
   ];
 
   DonutTab({super.key});
@@ -21,7 +45,7 @@ class DonutTab extends StatelessWidget {
           //numero de columnas
           crossAxisCount: 2,
           //proporcion(relacion de aspecto)
-          childAspectRatio: 1 / 1.5),
+          childAspectRatio: 1 / 1.55),
       //cuantos elementos
       itemCount: 4,
       padding: const EdgeInsets.all(12),
@@ -29,9 +53,10 @@ class DonutTab extends StatelessWidget {
       itemBuilder: (context, index) {
         return DonutTile(
           donutFlavor: donutsOnSale[index][0],
-          donutPrice: donutsOnSale[index][1],
-          donutColor: donutsOnSale[index][2],
-          imageName: donutsOnSale[index][3],
+          donutStore: donutsOnSale[index][1],
+          donutPrice: donutsOnSale[index][2],
+          donutColor: donutsOnSale[index][3],
+          imageName: donutsOnSale[index][4],
         );
       },
     );

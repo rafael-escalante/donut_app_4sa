@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class DonutTile extends StatelessWidget {
   final String donutFlavor;
+  final String donutStore;
   final String donutPrice;
   //dinamy por que sera del tipo color
   final dynamic donutColor;
@@ -10,6 +11,7 @@ class DonutTile extends StatelessWidget {
   const DonutTile(
       {super.key,
       required this.donutFlavor,
+      required this.donutStore,
       required this.donutPrice,
       required this.donutColor,
       required this.imageName});
@@ -62,28 +64,31 @@ class DonutTile extends StatelessWidget {
                     color: Colors.black)),
 
             Text(
-              'Dunkin´s',
+              donutStore,
               style: TextStyle(fontSize: 13, color: Colors.blueGrey),
             ),
 
             //Icons
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.favorite_border_outlined,
-                    )),
-                TextButton(
-                    onPressed: () {},
-                    child: Text("Add",
-                        style: TextStyle(
-                            fontSize: 20,
-                            color: const Color.fromARGB(255, 52, 53, 54),
-                            fontWeight: FontWeight.w900,
-                            decoration: TextDecoration.underline)))
-              ],
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.favorite_border_outlined,
+                      )),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text("Add",
+                          style: TextStyle(
+                              fontSize: 20,
+                              color: const Color.fromARGB(255, 52, 53, 54),
+                              fontWeight: FontWeight.w900,
+                              decoration: TextDecoration.underline))),
+                ],
+              ),
             )
           ],
         ),
