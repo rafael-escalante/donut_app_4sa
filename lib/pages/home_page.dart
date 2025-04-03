@@ -1,10 +1,11 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_application_1/tabs/burger_tab.dart';
 import 'package:flutter_application_1/tabs/donut_tab.dart';
 import 'package:flutter_application_1/tabs/pancakes_tab.dart';
 import 'package:flutter_application_1/tabs/pizza_tab.dart';
 import 'package:flutter_application_1/tabs/smoothie_tab.dart';
 import 'package:flutter_application_1/utils/my_tab.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter_application_1/utils/shopping_cart.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,21 +16,14 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<Widget> myTabs = [
-    MyTab(
-      iconPath: "lib/icons/donut.png",
-    ),
+    MyTab(iconPath: "lib/icons/donut.png", label: "Donas"),
     MyTab(
       iconPath: "lib/icons/burger.png",
+      label: "Hamburguesas",
     ),
-    MyTab(
-      iconPath: "lib/icons/smoothie.png",
-    ),
-    MyTab(
-      iconPath: "lib/icons/pancakes.png",
-    ),
-    MyTab(
-      iconPath: "lib/icons/pizza.png",
-    ),
+    MyTab(iconPath: "lib/icons/smoothie.png", label: "Smoothie"),
+    MyTab(iconPath: "lib/icons/pancakes.png", label: "Pancakes"),
+    MyTab(iconPath: "lib/icons/pizza.png", label: "pizza"),
   ];
 
   @override
@@ -60,7 +54,9 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Text(
                     "I Want to ",
-                    style: TextStyle(fontSize: 32),
+                    style: TextStyle(
+                      fontSize: 32,
+                    ),
                   ),
                   Text(
                     "Eat",
@@ -76,12 +72,10 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-
-            //2, Pestañas (TabBar)
+//2, Pestañas (TabBar)
             TabBar(tabs: myTabs),
 
-            //3, Contenido de pestañas (TabBarView)
-
+            // Contenido de pestañas (TabBarView)
             Expanded(
               child: TabBarView(children: [
                 DonutTab(),
@@ -90,9 +84,10 @@ class _HomePageState extends State<HomePage> {
                 PancakesTab(),
                 PizzaTab(),
               ]),
-            )
+            ),
 
             //4, Carrito (Cart)
+            ShoppingCart()
           ],
         ),
       ),
