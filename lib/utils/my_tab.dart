@@ -32,6 +32,7 @@ class MyTab extends StatelessWidget {
           const SizedBox(height: 4), // Espaciado entre la imagen y el texto
           Text(
             label,
+
             // Texto debajo de la imagen
             style: TextStyle(fontSize: 10, color: Colors.black),
           ),

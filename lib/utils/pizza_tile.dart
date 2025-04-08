@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-class BurgerTile extends StatelessWidget {
-  final String burgerFlavor;
-  final String burgerStore;
-  final String burgerPrice;
+class PizzaTile extends StatelessWidget {
+  final String pizzaFlavor;
+  final String pizzaStore;
+  final String pizzaPrice;
   //dinamy por que sera del tipo color
-  final dynamic burgerColor;
+  final dynamic pizzaColor;
   final String imageName;
 
-  const BurgerTile(
+  const PizzaTile(
       {super.key,
-      required this.burgerFlavor,
-      required this.burgerStore,
-      required this.burgerPrice,
-      required this.burgerColor,
+      required this.pizzaFlavor,
+      required this.pizzaStore,
+      required this.pizzaPrice,
+      required this.pizzaColor,
       required this.imageName});
 
   @override
@@ -21,9 +21,9 @@ class BurgerTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(12.0),
       child: Container(
-        //color: donutColor[50],
+        //color: pizzaColor[50],
         decoration: BoxDecoration(
-          color: burgerColor[50],
+          color: pizzaColor[50],
           //Esquinas redondeadas
           borderRadius: BorderRadius.circular(24),
         ),
@@ -35,7 +35,7 @@ class BurgerTile extends StatelessWidget {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: burgerColor[100],
+                    color: pizzaColor[100],
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(24),
                         topRight: Radius.circular(24)),
@@ -43,16 +43,16 @@ class BurgerTile extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(vertical: 8, horizontal: 18),
                   child: Text(
-                    '\$$burgerPrice',
+                    '\$$pizzaPrice',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
-                        color: burgerColor[800]),
+                        color: pizzaColor[800]),
                   ),
                 ),
               ],
             ),
-            //Donut price
+            //pizza price
             SizedBox(
               height: 120,
               child: Padding(
@@ -61,15 +61,15 @@ class BurgerTile extends StatelessWidget {
                 child: Image.asset(imageName),
               ),
             ),
-            //Donut flavor text
-            Text(burgerFlavor,
+            //pizza flavor text
+            Text(pizzaFlavor,
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                     color: Colors.black)),
 
             Text(
-              burgerStore,
+              pizzaStore,
               style: TextStyle(fontSize: 13, color: Colors.blueGrey),
             ),
 

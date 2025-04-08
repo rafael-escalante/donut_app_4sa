@@ -5,33 +5,49 @@ class BurgerTab extends StatelessWidget {
   //list of donuts
   final List burgersOnSale = [
     // [ donutFlavor,donutStore, donutPrice, donutColor, imageName ]
+    ["Normal", "Pollos Hermanos", "36", Colors.blue, "lib/images/burger_1.png"],
     [
-      "Ice Cream",
-      "Pollos Hermanos",
-      "36",
-      Colors.blue,
-      "lib/images/icecream_donut.png"
-    ],
-    [
-      "Strawberry",
+      "Doble carne",
       "Morayta Donuts",
       "45",
       Colors.red,
-      "lib/images/strawberry_donut.png"
+      "lib/images/burger_2.png"
     ],
     [
-      "Grape Ape",
+      "Pollo",
       "Selva Uitz Donuts",
       "84",
       Colors.purple,
-      "lib/images/grape_donut.png"
+      "lib/images/burger_3.png"
     ],
     [
-      "Choco",
+      "Carne y pollo",
       "Cesarin Donuts",
       "95",
       Colors.brown,
-      "lib/images/chocolate_donut.png"
+      "lib/images/burger_4.png"
+    ],
+    ["Tocino", "Pollos Hermanos", "36", Colors.blue, "lib/images/burger_5.png"],
+    [
+      "Extra queso",
+      "Morayta Donuts",
+      "45",
+      Colors.red,
+      "lib/images/burger_6.png"
+    ],
+    [
+      "Full queso",
+      "Selva Uitz Donuts",
+      "84",
+      Colors.purple,
+      "lib/images/burger_7.png"
+    ],
+    [
+      "Monstruo",
+      "Cesarin Donuts",
+      "95",
+      Colors.brown,
+      "lib/images/burger_8.png"
     ],
   ];
 
@@ -47,7 +63,7 @@ class BurgerTab extends StatelessWidget {
           //proporcion(relacion de aspecto)
           childAspectRatio: 1 / 1.75),
       //cuantos elementos
-      itemCount: 4,
+      itemCount: 8,
       padding: const EdgeInsets.all(12),
       //que elemento se construira
       itemBuilder: (context, index) {

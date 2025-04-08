@@ -28,6 +28,7 @@ class DonutTile extends StatelessWidget {
           borderRadius: BorderRadius.circular(24),
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -52,9 +53,13 @@ class DonutTile extends StatelessWidget {
               ],
             ),
             //Donut price
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-              child: Image.asset(imageName),
+            SizedBox(
+              height: 120,
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                child: Image.asset(imageName),
+              ),
             ),
             //Donut flavor text
             Text(donutFlavor,
