@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:flutter_application_1/pages/cart_model.dart';
 
 class DonutTile extends StatelessWidget {
   final String donutFlavor;
@@ -85,7 +87,12 @@ class DonutTile extends StatelessWidget {
                         Icons.favorite_border_outlined,
                       )),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Provider.of<CartModel>(context, listen: false).addItem(
+                          donutFlavor,
+                          double.parse(donutPrice),
+                        );
+                      },
                       child: Text("Add",
                           style: TextStyle(
                               fontSize: 20,

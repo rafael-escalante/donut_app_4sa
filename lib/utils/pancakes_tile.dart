@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:flutter_application_1/pages/cart_model.dart';
 
 class PancakesTile extends StatelessWidget {
   final String pancakesFlavor;
@@ -85,7 +87,12 @@ class PancakesTile extends StatelessWidget {
                         Icons.favorite_border_outlined,
                       )),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Provider.of<CartModel>(context, listen: false).addItem(
+                          pancakesFlavor,
+                          double.parse(pancakesPrice),
+                        );
+                      },
                       child: Text("Add",
                           style: TextStyle(
                               fontSize: 20,
